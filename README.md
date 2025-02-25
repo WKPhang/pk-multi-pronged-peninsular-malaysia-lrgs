@@ -1,11 +1,16 @@
 # zoonotic-malaria-pen-malaysia-lrgs
 This repository contains the codes used in data analysis for the following research article
 
-Introduction
-Aim
-Methods
-Findings
-Conclusion
+### Introduction
+The transmission of malaria caused by *Plasmodium knowlesi* is known to involve the human, non-human primate, and vector. Despite there has been various studies targetting these components separately, there is a lack of overall study combining the field data from these components
+
+### Aim
+
+### Methods
+
+### Results
+
+### Conclusion
 
 
 
