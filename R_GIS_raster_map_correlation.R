@@ -2,9 +2,17 @@ library(raster)
 library(sf)
 library(dplyr)
 
-raster_map <- raster("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/Raster map/XGBraster_mean_final.tif")
+# Import rasters of predicted map
+xgb_pk_map <- raster("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/Raster map/XGBraster_mean_final.tif")
+lr_vector_map <- raster("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/Raster map/predicted.tif")
 
-plot(raster_map)
+plot(xgb_pk_map)
+plot(lr_vector_map)
+
+# Assign raster map with EPSG:32647
+crs(xgb_pk_map) <- "EPSG:32647"
+
+crs(lr_vector_map) <- "EPSG:32647"
 
 # Define the value range for valid pixel cell
 value_range <- c(0, 1)
