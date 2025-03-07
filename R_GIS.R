@@ -14,6 +14,8 @@ h_df <- read.csv("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/hu
 moh_df <- read.csv("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/secondary_human_dataset.csv",
                    stringsAsFactors = T)
 
+m_df$pct_n
+
 ### Part 1: Descriptive Visualisation ######
 # Ensure full date range (Jan 2018 - Dec 2023)
 all_dates <- data.frame(
@@ -157,7 +159,7 @@ ggplot() +
   theme(axis.text.x = element_text(size = 18),
         axis.text.y = element_text(size = 18))
 
-# Check validaty of historical case data
+# Check validity of historical case data
 # Filter points that are within the polygon
 points_inside <- st_intersects(moh_shp, st_union(cropped_mys), sparse = F)
 points_outside <- moh_shp[!points_inside, ]
@@ -173,6 +175,25 @@ ggplot() +
   theme_minimal()+
   theme(axis.text.x = element_text(size = 18),
         axis.text.y = element_text(size = 18))
+
+# Create map of different species occurence
+
+filtered_m_shp <- m_shp %>% filter(pfi_bin == 1)
+filtered_v_shp <- v_shp %>% filter(pfi_bin == 1)
+
+ggplot() +
+  geom_sf(data = cropped_mys, fill = 'darkgrey', color = 'darkgrey') +
+  geom_sf(data = filtered_m_shp, color = 'blue', size = 4) +
+  geom_sf(data = filtered_v_shp , color = 'red', size = 4) +
+  annotation_north_arrow(
+    location = "topright",
+    style = north_arrow_orienteering(),
+    height = unit(1,"cm"),
+    width = unit(1,"cm"),) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(size = 18),
+        axis.text.y = element_text(size = 18))
+
 
 # Calculate pairwise distances
 distance_matrix <- st_distance(mozzi_data, macaca_data)
