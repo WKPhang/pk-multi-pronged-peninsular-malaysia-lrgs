@@ -1,4 +1,3 @@
-# Multi-Pronged Surveillance to Understand the Spatiotemporal Correlations among Macaques, Vectors, and Humans in Plasmodium knowlesi Malaria Transmission
 This repository contains the codes used in data analysis for the following research article
 
 ## Introduction
