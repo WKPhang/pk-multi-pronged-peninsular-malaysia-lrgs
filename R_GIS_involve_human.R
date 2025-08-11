@@ -3,7 +3,8 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 library(lubridate)
-
+library(terra)
+library(raster)
 
 mys_shp <- st_read("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/GIS/Malaysia_shapefile.shp")
 
@@ -89,8 +90,15 @@ m_df <- read.csv("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/ma
 v_df <- read.csv("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/vector_dataset.csv",
                  stringsAsFactors = T)
 v_df$malaria_rate <- v_df$malaria_n/v_df$an_total
+v_df$malaria_rate_lg <- v_df$malaria_n/v_df$lg_total
+v_df$pin_rate_lg <- v_df$pin_n/v_df$lg_total
+v_df$pcy_rate_lg <- v_df$pcy_n/v_df$lg_total
+v_df$nonlg_pernite <- v_df$an_pernite - v_df$lg_pernite
+
 v_df$lg_bin <- ifelse(v_df$lg_total == 0, 0, 1)
 
+h_df$nhp_mal_n <- h_df$pk_n + h_df$pcy_n + h_df$pin_n
+h_df$nhp_mal_rate <- h_df$nhp_mal_n/h_df$screened_n 
 
 h_df <- read.csv("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/human_dataset.csv",
                  stringsAsFactors = T)
@@ -104,7 +112,7 @@ h_shp <- st_read("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/GI
 moh_shp <- st_read("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/GIS/moh_UTM_47N.shp")
 mys_shp <- st_read("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/GIS/Malaysia_shapefile.shp")
 
-
+plot(h_shp)
 
 
 ggplot() +
@@ -143,11 +151,18 @@ cor.test(v_df$malaria_n, v_df$ext_human_pk, method = "spearman")
 cor.test(v_df$malaria_n, v_df$ext_an_dist, method = "spearman")
 cor.test(v_df$malaria_rate, v_df$ext_human_pk, method = "spearman")
 cor.test(v_df$malaria_rate, v_df$ext_an_dist, method = "spearman")
+cor.test(v_df$malaria_rate_lg, v_df$ext_human_pk, method = "spearman")
+cor.test(v_df$malaria_rate_lg, v_df$ext_an_dist, method = "spearman")
 
 cor.test(h_df$pk_n, h_df$ext_human_pk, method = "spearman")
 cor.test(h_df$pk_n, h_df$ext_an_dist, method = "spearman")
 cor.test(h_df$pk_rate, h_df$ext_human_pk, method = "spearman")
 cor.test(h_df$pk_rate, h_df$ext_an_dist, method = "spearman")
+cor.test(h_df$malaria_n, h_df$ext_human_pk, method = "spearman")
+cor.test(h_df$malaria_rate, h_df$ext_an_dist, method = "spearman")
+cor.test(h_df$nhp_mal_n, h_df$ext_human_pk, method = "spearman")
+cor.test(h_df$nhp_mal_n, h_df$ext_an_dist, method = "spearman")
+
 
 # Correlation plots
 

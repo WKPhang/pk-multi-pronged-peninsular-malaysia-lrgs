@@ -1,8 +1,9 @@
 library(sf)
 library(ggplot2)
-library(dplyr)
 library(lubridate)
 library(ggspatial)
+library(dplyr)
+library(tidyr)
 
 # Import data
 m_df <- read.csv("D:/Malaria/Writing/Paper 19 (Conclusion 1 knowlesi malaria)/macaque_dataset.csv",
@@ -27,7 +28,7 @@ all_dates <- data.frame(
     month_year = format(date, "%m/%Y")
   )
 
-# Aggregate the dataframe
+# Aggregate the dataframe by month
 m_df_bar <- m_df %>%
   group_by(year, month) %>%
   summarise(macaque_n = sum(macaque_n),
@@ -147,9 +148,29 @@ cropped_mys <- st_crop(mys_shp, bbox)
 
 ggplot() +
   geom_sf(data = cropped_mys, fill = 'darkgrey', color = 'darkgrey') +
-  geom_sf(data = m_shp, color = 'blue', size = 4) +
-  geom_sf(data = v_shp, color = 'red', size = 4) +
-  geom_sf(data = h_shp, color = 'darkgreen', size = 4) +
+  geom_sf(data = m_shp, aes(color = lndscp_), size = 4) +
+  scale_color_manual(values = c(
+    "urban" = "red",
+    "peridomestic_agri" = "blue",
+    "peridomestic_forest" = "darkgreen"
+  )) +
+  annotation_north_arrow(
+    location = "topright",
+    style = north_arrow_orienteering(),
+    height = unit(1, "cm"),
+    width = unit(1, "cm")
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(size = 18),
+    axis.text.y = element_text(size = 18)
+  )
+
+
+# Macaque only
+ggplot() +
+  geom_sf(data = cropped_mys, fill = 'darkgrey', color = 'darkgrey') +
+  geom_sf(data = m_shp, aes(color = m_shp$lndscp_), size = 4) +
   annotation_north_arrow(
     location = "topright",
     style = north_arrow_orienteering(),
@@ -158,6 +179,7 @@ ggplot() +
   theme_minimal() +
   theme(axis.text.x = element_text(size = 18),
         axis.text.y = element_text(size = 18))
+
 
 # Check validity of historical case data
 # Filter points that are within the polygon
@@ -195,93 +217,317 @@ ggplot() +
         axis.text.y = element_text(size = 18))
 
 
-# Calculate pairwise distances
-distance_matrix <- st_distance(mozzi_data, macaca_data)
+# Calculate pairwise distances between macaque and vector data
+m_v_dist_matrix <- st_distance(m_shp, v_shp) %>% # create distance matrix
+  as.numeric()/1000 # Convert distances to kilometers
 
-# Convert distances to kilometers
-distance_matrix_km <- as.numeric(distance_matrix) / 1000
+h_m_dist_matrix <- st_distance(h_shp, m_shp) %>% 
+  as.numeric()/1000 # 
+
+h_v_dist_matrix <- st_distance(h_shp, v_shp) %>% 
+  as.numeric()/1000 # 
 
 # Convert the distance matrix to a long-format data frame
-distance_df <- as.data.frame(as.table(as.matrix(distance_matrix_km)))
+m_v_dist_df <- as.data.frame(as.table(as.matrix(m_v_dist_matrix)))
+h_m_dist_df <- as.data.frame(as.table(as.matrix(h_m_dist_matrix)))
+h_v_dist_df <- as.data.frame(as.table(as.matrix(h_v_dist_matrix)))
 
 # Convert row and column identifiers to proper point IDs 
 
-ID_list <- expand.grid(mozzi_ID = mozzi_data$id, macaca_ID = macaca_data$id)
+ID_list1 <- expand.grid(m_id = m_shp$m_smp_d, v_id = v_shp$v_samp_id)
+m_v_dist_df[, 1:2] <- ID_list1[, 1:2]
 
-distance_df[, 1:2] <- ID_list[, 1:2]
+ID_list2 <- expand.grid(h_id = h_shp$h_smp_d, m_id = m_shp$m_smp_d)
+h_m_dist_df[, 1:2] <- ID_list2[, 1:2]
+
+ID_list3 <- expand.grid(h_id = h_shp$h_smp_d, v_id = v_shp$v_samp_id)
+h_v_dist_df[, 1:2] <- ID_list3[, 1:2]
 
 # Rename the columns for clarity
-names(distance_df) <- c("mozzi_ID", "macaca_ID", "Distance_km")
+names(m_v_dist_df) <- c("m_id", "v_id", "dist_km")
+names(h_m_dist_df) <- c("h_id", "m_id", "dist_km")
+names(h_v_dist_df) <- c("h_id", "v_id", "dist_km")
+
+#calculate number of link for each proximity constraint
+library(tidyr)
+
+thresholds <- 1:40
+
+row_counts <- data.frame()
+
+for (t in thresholds) {
+  row_counts <- rbind(
+    row_counts,
+    data.frame(
+      threshold = t,
+      source = "m_v",
+      count = m_v_dist_df %>% filter(dist_km <= t) %>% nrow()
+    ),
+    data.frame(
+      threshold = t,
+      source = "h_m",
+      count = h_m_dist_df %>% filter(dist_km <= t) %>% nrow()
+    ),
+    data.frame(
+      threshold = t,
+      source = "h_v",
+      count = h_v_dist_df %>% filter(dist_km <= t) %>% nrow()
+    )
+  )
+}
+
+# Plotting
+ggplot(row_counts, aes(x = threshold, y = count, color = source)) +
+  geom_line(size = 1.2) +
+  labs(
+    title = "Number of site pairs within proximity constraint",
+    x = "Proximity constraint (km)",
+    y = "Number of site pairs",
+    color = "Data Source"
+  ) +
+  theme_classic(base_size = 14) +
+  theme(
+    axis.title = element_text(size = 18),     
+    axis.text = element_text(size = 18),      
+    legend.title = element_text(size = 14),   
+    legend.text = element_text(size = 13),    
+    plot.title = element_text(size = 20, face = "bold") 
+  )
+row_df 
 
 # Filter for distances within 10 km
-within_100km <- distance_df %>% filter(Distance_km <= 40)
+m_v_within_40km <- m_v_dist_df %>% filter(dist_km <= 40)
+h_m_within_40km <- h_m_dist_df %>% filter(dist_km <= 40)
+h_v_within_40km <- h_v_dist_df %>% filter(dist_km <= 40)
+
 
 # Visualize the points and connections within 10 km using ggplot2
-lines <- within_100km %>%
+m_v_lines <- m_v_within_40km %>%
   rowwise() %>%
   mutate(
-    moz_coords = st_coordinates(st_as_sf(mozzi_data[mozzi_data$id == mozzi_ID, ])),
-    mac_coords = st_coordinates(st_as_sf(macaca_data[macaca_data$id == macaca_ID, ]))
+    m_coords = st_coordinates(st_as_sf(m_shp[m_shp$m_smp_d == m_id, ])),
+    v_coords = st_coordinates(st_as_sf(v_shp[v_shp$v_samp_id == v_id, ]))
+  )
+
+h_m_lines <- h_m_within_40km %>%
+  rowwise() %>%
+  mutate(
+    h_coords = st_coordinates(st_as_sf(h_shp[h_shp$h_smp_d == h_id, ])),
+    m_coords = st_coordinates(st_as_sf(m_shp[m_shp$m_smp_d == m_id, ]))
+  )
+
+h_v_lines <- h_v_within_40km %>%
+  rowwise() %>%
+  mutate(
+    h_coords = st_coordinates(st_as_sf(h_shp[h_shp$h_smp_d == h_id, ])),
+    v_coords = st_coordinates(st_as_sf(v_shp[v_shp$v_samp_id == v_id, ]))
   )
 
 ggplot() +
   geom_sf(data = cropped_mys, fill = 'lightgrey', color = 'lightgrey')+
-  geom_sf(data = mozzi_data, color = "blue", size = 3) +
-  geom_sf(data = macaca_data, color = "red", size = 3) +
-  geom_segment(data = lines,
-               aes(x = moz_coords[,1], y = moz_coords[,2], 
-                   xend = mac_coords[,1], yend = mac_coords[,2]),
+  geom_sf(data = v_shp, color = "red", size = 3) +
+  geom_sf(data = m_shp, color = "blue", size = 3) +
+  geom_sf(data = h_shp, color = "darkgreen", size = 3) +
+  geom_segment(data = m_v_lines,
+               aes(x = m_coords[,1], y = m_coords[,2], 
+                   xend = v_coords[,1], yend = v_coords[,2]),
+               color = "black") +
+  geom_segment(data = h_m_lines,
+               aes(x = h_coords[,1], y = h_coords[,2], 
+                   xend = m_coords[,1], yend = m_coords[,2]),
+               color = "black") +
+  geom_segment(data = h_v_lines,
+               aes(x = h_coords[,1], y = h_coords[,2], 
+                   xend = v_coords[,1], yend = v_coords[,2]),
                color = "black") +
   theme_minimal()
 
 
 # Combine data for analysis
-my_data <- within_100km 
+my_data <- m_v_within_40km
+colnames(v_df)
 
 my_data <- my_data %>%
-  left_join(mozzi_data %>% select( id, month, year, month_year,
-                                  anopheles, leuco_grou, leuco_comp, 
-                                  an_pernite, lg_pernite, lc_pernite), 
-            by = c("mozzi_ID" = "id"))
+  left_join(m_df %>% dplyr::select( m_samp_id, month, year, month_year, 
+                             macaque_n, malaria_n, malaria_rate, 
+                             pk_n, pk_rate), 
+            by = c("m_id" = "m_samp_id"))
 
 my_data <- my_data %>%
-  left_join(macaca_data %>% select( id, month, year, month_year,
-                                   macaque_n, malaria_n, pk_n), 
-            by = c("macaca_ID" = "id"))
+  left_join(v_df %>% dplyr::select( v_samp_id, month, year, month_year, 
+                             an_pernite, lg_pernite, malaria_n, 
+                             mal_bin, malaria_rate), 
+            by = c("v_id" = "v_samp_id"))
 
-my_data  <- my_data  %>% 
-  select(-c(geometry.x, geometry.y))
 
-# Calculate new variable
-my_data$pk_percent <- my_data$pk_n / my_data$macaque_n
+my_data <- my_data %>%
+  left_join(h_df %>% dplyr::select( h_samp_id, month, year, month_year, 
+                             malaria_n, pk_n, pk_rate), 
+            by = c("h_id" = "h_samp_id"))
+
+str(h_df)
+# Calculate new variable duration gap (x-y)
+# x is later
+# y is earlier
+my_data <- my_data %>%
+  mutate(duration_gap_mth = time_length(interval(as.Date(paste(year.y, month.y, "01", sep = "-")), 
+                                                 as.Date(paste(year.x, month.x, "01", sep = "-"))), "months"))
+
+
+# Partial correlation analysis
+library(ppcor)
 str(my_data)
-my_data <- my_data %>%
-  mutate(duration_gap_mth= interval(as.Date(month_year.x), 
-                                    as.Date(month_year.y)) / months(1))
 
-plot(my_data$duration_gap_mth, my_data$pk_percent,
-     pch = 19, frame = FALSE)
+max(my_data$dist_km)
 
-library(plotly)
-plot_ly(x = my_data$lg_pernite, 
-        y = my_data$Distance_km, 
-        z = my_data$pk_n, 
-        type = 'scatter3d',
-        marker = list(color = ~my_data$duration_gap_mth, 
-                      colorscale = c('yellow', 'red'), 
-                      showscale = TRUE,
-                      size = 5))
+cor.test(my_data$pk_rate, my_data$lg_pernite, method = "spearman")
+pcor.test(my_data$pk_rate, my_data$lg_pernite, my_data$dist_km, method = "spearman")
+pcor.test(my_data$pk_rate, my_data$lg_pernite, 
+          my_data[,c("dist_km", "duration_gap_mth")], method = "spearman")
 
-#Correlation analysis
+# calculate proportion of all parasites in macaques in each landscape type
+str(m_df)
 
-# Calculate Spearman correlation
-library("ggpubr")
-colnames(my_data)
-var_A <- "duration_gap_mth"
-var_B <- "pk_percent"
+prop_df <- m_df %>%                                   # your data frame
+  group_by(landscape_type) %>%                      # aggregate by landscape
+  summarise(
+    across(
+      c(pk_n, pcy_n, pin_n, pct_n, pfi_n, macaque_n),
+      sum,
+      na.rm = TRUE
+    ),
+    .groups = "drop"
+  ) %>%                                             #  convert counts → proportions
+  mutate(across(
+    c(pk_n, pcy_n, pin_n, pct_n, pfi_n),
+    ~ .x / macaque_n
+  )) %>%                                            # long format for ggplot
+  dplyr::select(- macaque_n) %>%
+  pivot_longer(
+    cols  = pk_n:pfi_n,
+    names_to  = "species",
+    values_to = "prop"
+  )
 
-ggscatter(my_data, x = var_A, y = var_B, 
-          add = "reg.line", conf.int = TRUE, 
-          cor.coef = TRUE, cor.method = "spearman",
-          xlab = "An. caught per night", ylab = "Macaca positive n")
+# ── 2. Plot ──────────────────────────────────────────────────────────────
+ggplot(prop_df, aes(x = species,
+                    y = prop,
+                    fill = landscape_type)) +
+  geom_col(position = position_dodge(width = 0.8),
+           width = 0.7) +
+  scale_y_continuous(labels = scales::percent_format(),
+                     expand = expansion(mult = c(0, 0.05))) +
+  scale_fill_manual(
+    values = c(
+      "urban" = "red",
+      "peridomestic_agri" = "blue",
+      "peridomestic_forest" = "darkgreen"
+    ),
+    name = "Landscape Type"
+  ) +
+  labs(
+    x = "Parasite species",
+    y = "Proportion of Positive Samples",
+    title = "Proportion of Parasite‑Positive Samples by Landscape"
+  ) +
+  theme_classic(base_size = 14) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
 
+# 1. Summarise total samples per landscape_type
+pie_data <- m_df %>%
+  group_by(landscape_type) %>%
+  summarise(total_samples = sum(macaque_n, na.rm = TRUE)) %>%
+  ungroup() %>%
+  mutate(
+    percent = total_samples / sum(total_samples) * 100,
+    label = paste0(total_samples, " (", round(percent, 1), "%)")
+  )
+
+# 2. Pie chart
+ggplot(pie_data, aes(x = "", y = total_samples, fill = landscape_type)) +
+  geom_col(width = 1, color = "white") +
+  coord_polar(theta = "y") +
+  scale_fill_manual(values = c(
+    "urban" = "red",
+    "peridomestic_agri" = "blue",
+    "peridomestic_forest" = "darkgreen"
+  )) +
+  geom_text(aes(label = label),
+            position = position_stack(vjust = 0.5),
+            color = "white", size = 5) +
+
+  theme_void(base_size = 14)
+
+# Chi-square test for all parasite spcies
+library(dplyr)
+library(tidyr)
+library(purrr)
+library(stats)
+
+# Define species columns
+species_list <- c("pk_n", "pcy_n", "pin_n", "pct_n", "pfi_n")
+
+# Get landscape combinations for pairwise comparisons
+landscapes <- unique(m_df$landscape_type)
+landscape_pairs <- combn(landscapes, 2, simplify = FALSE)
+
+# Create a list to store results
+chi_sq_results <- list()
+
+for (sp in species_list) {
+  
+  # Step 1: Create aggregated data
+  temp_df <- m_df %>%
+    group_by(landscape_type) %>%
+    summarise(
+      infected = sum(.data[[sp]], na.rm = TRUE),
+      total = sum(macaque_n, na.rm = TRUE),
+      not_infected = total - infected,
+      .groups = "drop"
+    )
+  
+  # Step 2: Run overall chi-square test
+  contingency_matrix <- as.matrix(temp_df[, c("infected", "not_infected")])
+  rownames(contingency_matrix) <- temp_df$landscape_type
+  contingency_matrix <- t(contingency_matrix)
+  chisq_test <- suppressWarnings(chisq.test(contingency_matrix))
+  
+  # Step 3: Manual pairwise comparisons
+  pairwise_pvals <- map_dfr(landscape_pairs, function(pair) {
+    df_pair <- temp_df %>% filter(landscape_type %in% pair)
+    
+    pair_matrix <- matrix(
+      c(df_pair$infected, df_pair$not_infected),
+      nrow = 2,
+      byrow = TRUE
+    )
+    colnames(pair_matrix) <- df_pair$landscape_type
+    rownames(pair_matrix) <- c("infected", "not_infected")
+    
+    test <- suppressWarnings(chisq.test(pair_matrix))
+    
+    tibble(
+      species = sp,
+      group1 = pair[1],
+      group2 = pair[2],
+      p_value = test$p.value
+    )
+  })
+  
+  # Step 4: Adjust p-values with Bonferroni correction
+  pairwise_pvals <- pairwise_pvals %>%
+    mutate(p_adj = p.adjust(p_value, method = "bonferroni"))
+  
+  # Step 5: Save results
+  chi_sq_results[[sp]] <- list(
+    overall_test = chisq_test,
+    posthoc = pairwise_pvals
+  )
+}
+
+chi_sq_results$pcy_n$overall_test  # Overall chi-square test result for P. knowlesi
+chi_sq_results$pk_n$posthoc       # Pairwise comparisons with Bonferroni adjustment
+chi_sq_results$pin_n$posthoc       # Pairwise comparisons with Bonferroni adjustment
+chi_sq_results$pct_n$posthoc       # Pairwise comparisons with Bonferroni adjustment
