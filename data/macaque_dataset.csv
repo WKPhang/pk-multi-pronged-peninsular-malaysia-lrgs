@@ -1,79 +1,79 @@
-m_samp_id,host,state,month,year,month_year,loc_name,latitude,longitude,day_count,macaque_n,malaria_n,pk_n,pcy_n,pin_n,pct_n,pfi_n,malaria_rate,pk_rate,pcy_rate,pin_rate,pct_rate,pfi_rate,pk_bin,pcy_bin,pin_bin,pct_bin,pfi_bin,pk_cat,pcy_cat,pin_cat,pct_cat,pfi_cat
-1,macaque,Johor,6,2019,30/6/2019,"Kampung Muhibah, Kota Tinggi",1.52168,104.1456,1,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-2,macaque,Johor,6,2019,30/6/2019,"Kampung Orang Asli, Bandar Penawar, Kota Tinggi",1.546782,104.063144,1,9,8,5,6,7,7,7,0.888888889,0.555555556,0.666666667,0.777777778,0.777777778,0.777777778,1,1,1,1,1,2,3,3,3,3
-3,macaque,Johor,6,2019,30/6/2019,"Kampung Shaari, Simpang Renggam, Kluang",1.8287,103.3226,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-4,macaque,Johor,6,2019,30/6/2019,"Kampung Melayu, Batu 4, Paloh, Kluang",2.2071,103.1927,1,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-5,macaque,Johor,6,2019,30/6/2019,"Batu 7, Simpang Renggam, Kluang",1.8362,103.3374,1,7,3,0,3,1,0,0,0.428571429,0,0.428571429,0.142857143,0,0,0,1,1,0,0,1,2,2,1,1
-6,macaque,Johor,6,2019,30/6/2019,"Bukit Nyamuk, Simpang Renggam, Kluang",1.7605,103.3891,1,13,9,3,7,4,0,1,0.692307692,0.230769231,0.538461538,0.307692308,0,0.076923077,1,1,1,0,1,2,3,2,1,2
-7,macaque,Johor,9,2020,30/9/2020,"Endau Semaloi, Mersing",2.635275,103.638408,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-8,macaque,Johor,9,2020,30/9/2020,"Felda Tenggaruh Aroh Satu, Mersing",2.087249,103.876255,1,15,15,15,5,15,12,8,1,1,0.333333333,1,0.8,0.533333333,1,1,1,1,1,4,2,4,4,3
-9,macaque,Johor,9,2020,30/9/2020,"Ayer Tawar, Mersing",2.634318,103.64179,1,2,1,1,0,0,0,1,0.5,0.5,0,0,0,0.5,1,0,0,0,1,2,1,1,1,2
-10,macaque,Johor,9,2020,30/9/2020,"Nitar Dua, Mersing",2.39628,103.670488,1,8,7,1,2,7,5,3,0.875,0.125,0.25,0.875,0.625,0.375,1,1,1,1,1,2,2,3,2,2
-11,macaque,Selangor,10,2019,31/10/2019,"Hulu Langat, Selangor",2.8675,101.8385,1,5,4,2,4,0,0,0,0.8,0.4,0.8,0,0,0,1,1,0,0,0,2,2,1,1,1
-12,macaque,Selangor,11,2019,30/11/2019,"UKM, Hulu Langat,  Selangor",2.9293,101.7799,1,1,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,2,1,2,1
-13,macaque,Selangor,12,2019,31/12/2019,"UKM, Hulu Langat,  Selangor",2.9293,101.7799,2,4,2,1,1,0,1,0,0.5,0.25,0.25,0,0.25,0,1,1,0,1,0,2,2,1,2,1
-14,macaque,Selangor,4,2022,30/4/2022,"Jalan Sesapan Batu Rembau, Semenyih, Hulu Langat",2.8942775,101.8772194,1,3,1,0,0,0,0,0,0.333333333,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-15,macaque,Selangor,4,2022,30/4/2022,"Desa Indah, Sepang",2.698706,101.7564933,1,11,1,0,0,1,0,1,0.090909091,0,0,0.090909091,0,0.090909091,0,0,1,0,1,1,1,2,1,2
-16,macaque,Selangor,4,2022,30/4/2022,"Jenderam Hilir, Dengkil, Sepang",2.8853938,101.728271,1,8,8,5,8,2,1,5,1,0.625,1,0.25,0.125,0.625,1,1,1,1,1,2,3,2,2,2
-17,macaque,Selangor,4,2022,30/4/2022,"Mahkamah Salak Tinggi, Sepang",2.8238895,101.7238317,1,9,8,6,5,3,2,4,0.888888889,0.666666667,0.555555556,0.333333333,0.222222222,0.444444444,1,1,1,1,1,3,2,2,2,2
-18,macaque,Selangor,5,2022,31/5/2022,"Desa Indah, Sepang, Hulu Langat",2.6981162,101.7555863,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-19,macaque,Selangor,5,2022,31/5/2022,"Ijok, Sabak Bernam",3.3209037,101.4297848,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-20,macaque,Selangor,6,2022,30/6/2022,"Jalan Rasa, Bukit Sentosa, Hulu Selangor",3.4450725,101.6003308,1,7,7,4,3,7,6,7,1,0.571428571,0.428571429,1,0.857142857,1,1,1,1,1,1,2,2,3,3,3
-21,macaque,Selangor,6,2022,30/6/2022,"Pulau Indah, Klang, Petaling",2.9351036,101.3161654,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-22,macaque,Selangor,6,2022,30/6/2022,"Kg Endah, Tanjung Sepat, Kuala Langat",2.7339508,101.4678083,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-23,macaque,Pahang,10,2019,31/10/2019,"Kg Relong, Kuala Lipis, Pahang",4.2071969,101.9626555,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2
-24,macaque,Pahang,11,2019,30/11/2019,"Kg Beletik, Kuala Lipis, Pahang 1",4.1746254,101.9091628,2,20,20,13,16,15,19,11,1,0.65,0.8,0.75,0.95,0.55,1,1,1,1,1,4,4,4,4,4
-25,macaque,Pahang,11,2019,30/11/2019,"Kolej Vokasional Sultan Haji Ahmad Shah, Kuala Lipis Pahang",4.0922517,102.0061229,2,12,12,6,6,11,11,4,1,0.5,0.5,0.916666667,0.916666667,0.333333333,1,1,1,1,1,3,3,4,4,2
-26,macaque,Pahang,12,2019,31/12/2019,"Sungai Kerpan, Kuala Lipis, Pahang",4.1870288,102.0436588,1,6,6,4,6,6,6,6,1,0.666666667,1,1,1,1,1,1,1,1,1,2,3,3,3,3
-27,macaque,Pahang,12,2019,31/12/2019,"Kg Beletik, Kuala Lipis, Pahang 2",4.016509,101.9100844,1,10,10,4,9,10,8,9,1,0.4,0.9,1,0.8,0.9,1,1,1,1,1,2,3,3,3,3
-28,macaque,Pahang,12,2019,31/12/2019,"CCRC Benda, Kuala Lipis, Pahang",4.050368,101.9861081,1,3,3,3,2,3,2,2,1,1,0.666666667,1,0.666666667,0.666666667,1,1,1,1,1,2,2,2,2,2
-29,macaque,Pahang,3,2020,31/3/2020,"Masjid Kechau Tui, Kuala Lipis, Pahang",4.2911464,101.9778253,1,8,8,8,7,8,8,8,1,1,0.875,1,1,1,1,1,1,1,1,3,3,3,3,3
-30,macaque,Pahang,9,2022,30/9/2022,"Indera Mahkota 13, Astana Willa, Kuantan",3.8370726,103.2727817,1,2,2,1,0,1,1,2,1,0.5,0,0.5,0.5,1,1,0,1,1,1,2,1,2,2,2
-31,macaque,Pahang,9,2022,30/9/2022,"Kg Semangat, Pekan",3.6332681,103.3202384,1,1,1,0,0,0,1,0,1,0,0,0,1,0,0,0,0,1,0,1,1,1,2,1
-32,macaque,Pahang,9,2022,30/9/2022,"Kg Batu Putih, Pekan",3.6427924,103.294828,1,1,1,0,0,1,0,1,1,0,0,1,0,1,0,0,1,0,1,1,1,2,1,2
-33,macaque,Pahang,9,2022,30/9/2022,"Bandar Damansara, Kuantan",3.8935086,103.3310202,1,3,3,0,0,3,0,3,1,0,0,1,0,1,0,0,1,0,1,1,1,2,1,2
-34,macaque,Pahang,9,2022,30/9/2022,"Kg Ulu Luit, Maran",3.6581565,102.819366,1,4,4,3,3,4,4,4,1,0.75,0.75,1,1,1,1,1,1,1,1,2,2,2,2,2
-35,macaque,Pahang,9,2022,30/9/2022,"Kg Serengkam, Maran",3.4869782,102.7991083,1,2,2,2,1,2,1,2,1,1,0.5,1,0.5,1,1,1,1,1,1,2,2,2,2,2
-36,macaque,Melaka,11,2019,30/11/2019,"Pengkalan Lanjut Tanjung Keling, Melaka Tengah",2.2229,102.1704,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-37,macaque,Melaka,11,2019,30/11/2019,"Kem Terendak, Sungai Udang, Melaka Tengah",2.2859,102.1061,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-38,macaque,Melaka,11,2019,30/11/2019,"Kg Melekeh Dalam, Alor Gajah",2.4407,102.1731,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-39,macaque,Kelantan,2,2020,29/2/2020,"Kg Lepam Jaya, Gua Musang ",4.7831119,102.0091398,1,16,8,4,4,2,1,3,0.5,0.25,0.25,0.125,0.0625,0.1875,1,1,1,1,1,2,2,2,2,2
-40,macaque,Kelantan,2,2020,29/2/2020,"Kpg. Chintek, Gua Musang ",4.8282741,101.985278,2,6,4,1,3,2,3,3,0.666666667,0.166666667,0.5,0.333333333,0.5,0.5,1,1,1,1,1,2,2,2,2,2
-41,macaque,Kelantan,2,2020,29/2/2020,"Kpg. Banggol Judah, Machang",5.8224169,102.2383955,1,3,1,0,1,1,0,1,0.333333333,0,0.333333333,0.333333333,0,0.333333333,0,1,1,0,1,1,2,2,1,2
-42,macaque,Kelantan,2,2020,29/2/2020,"Kpg. Panglima Bayu, Tanah Merah ",5.8168877,101.971691,1,2,2,1,2,1,0,2,1,0.5,1,0.5,0,1,1,1,1,0,1,2,2,2,1,2
-43,macaque,Kelantan,2,2020,29/2/2020,"Kpg. Pak Gombak, Machang ",5.8369483,102.1994189,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-44,macaque,Kedah,3,2020,31/3/2020,"Kuala Nerang, Padang Terap",6.2358505,100.5365784,1,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-45,macaque,Kedah,3,2020,31/3/2020,"Ladang Wesley, Baling 2",5.4335468,100.5255823,1,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-46,macaque,Kedah,3,2020,31/3/2020,"Paya Jemeri, Baling 1",5.5521793,100.6349776,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-47,macaque,Perak,10,2020,31/10/2020,"Sugai Limau, Kinta",4.7809,100.6648,1,8,1,0,0,1,1,1,0.125,0,0,0.125,0.125,0.125,0,0,1,1,1,1,1,2,2,2
-48,macaque,Perak,10,2020,31/10/2020,"Felda Trolak Utara, Mualim",3.9455476,101.3558504,1,1,1,0,1,1,0,1,1,0,1,1,0,1,0,1,1,0,1,1,2,2,1,2
-49,macaque,Perak,10,2020,31/10/2020,"Sek Agama Slim River, Batang Padang ",4.2051219,101.4319838,1,1,1,0,0,1,1,1,1,0,0,1,1,1,0,0,1,1,1,1,1,2,2,2
-50,macaque,Perak,10,2020,31/10/2020,"Diamond Creek, Mualim",3.771434,101.5219013,1,2,1,1,0,1,2,1,0.5,0.5,0,0.5,1,0.5,1,0,1,1,1,2,1,2,2,2
-51,macaque,Perak,10,2020,31/10/2020,"Kg Chulek,Gopeng, Kampar",4.4818466,101.1749601,1,4,2,2,0,2,2,2,0.5,0.5,0,0.5,0.5,0.5,1,0,1,1,1,2,1,2,2,2
-52,macaque,Perak,3,2022,31/3/2022,"Bubuk Buntur, Kuala Gula, Kerian (?) ",4.9403,100.4806,1,11,1,0,0,1,0,1,0.090909091,0,0,0.090909091,0,0.090909091,0,0,1,0,1,1,1,2,1,2
-53,macaque,Perak,6,2022,30/6/2022,"Kg Bakar Bata Beruas, Manjung, Perak",4.3958,100.785,1,8,1,1,0,0,0,0,0.125,0.125,0,0,0,0,1,0,0,0,0,2,1,1,1,1
-54,macaque,Perlis,2,2021,28/2/2021,"Kg Paya Kelubi, Kangar",6.5362821,100.258726,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-55,macaque,Perlis,2,2021,28/2/2021,"PPRT, Kangar",6.4325716,100.1650303,1,3,1,0,0,1,0,1,0.333333333,0,0,0.333333333,0,0.333333333,0,0,1,0,1,1,1,2,1,2
-56,macaque,Perlis,2,2021,28/2/2021,"Bukit Lagi, Kangar",6.4356306,100.1897602,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-57,macaque,Perlis,2,2021,28/2/2021,"Jalan Kaki Bukit, Kangar",6.5883597,100.2005995,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-58,macaque,Negeri Sembilan,8,2021,31/8/2021,"Lot 1134, Batu 14, Pasir Panjang, Port Dickson",2.4328865,101.9082273,1,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-59,macaque,Negeri Sembilan,8,2021,31/8/2021,"Sungai Raya, Tg Agas, Port Dickson",2.4117858,101.9622927,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-60,macaque,Negeri Sembilan,8,2021,31/8/2021,"Kg Segenting, Port Dickson",2.4268847,101.8732208,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-61,macaque,Negeri Sembilan,9,2021,30/9/2021,"Kg Teluk Pelanduk, Port Dickson",2.4270884,101.9212121,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-62,macaque,Negeri Sembilan,9,2021,30/9/2021,"Kg Sungai Bioh, Lenggeng, Seremban",2.8639405,101.8878606,1,2,1,0,1,0,0,1,0.5,0,0.5,0,0,0.5,0,1,0,0,1,1,2,1,1,2
-63,macaque,Terengganu,6,2022,30/6/2022,"Kg Beris Baru, Besut",5.7969316,102.5233648,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-64,macaque,Terengganu,6,2022,30/6/2022,"Kg Kerandang, Besut",5.716086,102.569492,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-65,macaque,Terengganu,6,2022,30/6/2022,"Kg Rahmat, Besut",5.4651013,102.7999929,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2
-66,macaque,Terengganu,6,2022,30/6/2022,"Kg Bukit Diman, Hulu Terengganu",5.0456679,103.1141474,1,9,9,7,7,9,6,9,1,0.777777778,0.777777778,1,0.666666667,1,1,1,1,1,1,3,3,3,3,3
-67,macaque,Terengganu,7,2022,31/7/2022,"Istana Syarqiyyah, Bukit Chendering, Kuala Terengganu",5.2550208,103.1709478,1,1,1,0,0,1,0,1,1,0,0,1,0,1,0,0,1,0,1,1,1,2,1,2
-68,macaque,Terengganu,7,2022,31/7/2022,"Pulau Kerengga, Kuala Terengganu",5.1288338,103.2487988,1,2,2,2,1,0,0,1,1,1,0.5,0,0,0.5,1,1,0,0,1,2,2,1,1,2
-69,macaque,Terengganu,7,2022,31/7/2022,"Kg Jati Gong Badak, Kuala Terengganu",5.3856019,103.086532,1,3,2,0,1,2,2,2,0.666666667,0,0.333333333,0.666666667,0.666666667,0.666666667,0,1,1,1,1,1,2,2,2,2
-70,macaque,Terengganu,7,2022,31/7/2022,"Felda Belara, Kuala Terengganu",5.292288,102.944331,1,3,3,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2
-71,macaque,Terengganu,7,2022,31/7/2022,"Felda Jerangau, Dungun",4.9011781,103.1867777,1,6,6,6,6,6,6,6,1,1,1,1,1,1,1,1,1,1,1,3,3,3,3,3
-72,macaque,Terengganu,9,2022,30/9/2022,"Kg Baru, Kemasik, Kemaman",4.4251179,103.4426062,1,1,1,0,0,1,0,1,1,0,0,1,0,1,0,0,1,0,1,1,1,2,1,2
-73,macaque,Terengganu,9,2022,30/9/2022,"Bukit Teruna, Kemasik, Kemaman",4.3764006,103.4084356,1,13,4,1,1,2,2,2,0.307692308,0.076923077,0.076923077,0.153846154,0.153846154,0.153846154,1,1,1,1,1,2,2,2,2,2
-74,macaque,Terengganu,9,2022,30/9/2022,"Rantau Bukit , Rantau Laut, Kemasik, Kemaman",4.4696882,103.4414913,1,14,2,1,0,1,0,1,0.142857143,0.071428571,0,0.071428571,0,0.071428571,1,0,1,0,1,2,1,2,1,2
-75,macaque,Kuala Lumpur,6,2022,30/6/2022,Kg Sungai Penchala,3.1587707,101.6305307,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-76,macaque,Kuala Lumpur,6,2022,30/6/2022,Taman Persekutuan Bukit Kiara TTDI,3.145795,101.632394,1,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-77,macaque,Kuala Lumpur,9,2022,30/9/2022,"Kelab Golf Diraja Selangor, Jalan Tun Razak",3.1438739,101.7236207,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
-78,macaque,Putrajaya,6,2022,30/6/2022,Putrajaya Presint 11,2.9623865,101.6767076,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
+m_samp_id,host,state,month,year,month_year,loc_name,latitude,longitude,day_count,macaque_n,malaria_n,pk_n,pcy_n,pin_n,pct_n,pfi_n,malaria_rate,pk_rate,pcy_rate,pin_rate,pct_rate,pfi_rate,pk_bin,pcy_bin,pin_bin,pct_bin,pfi_bin,pk_cat,pcy_cat,pin_cat,pct_cat,pfi_cat,landscape_type
+1,macaque,Johor,6,2019,30/6/2019,"Kampung Muhibah, Kota Tinggi",1.52168,104.1456,1,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+2,macaque,Johor,6,2019,30/6/2019,"Kampung Orang Asli, Bandar Penawar, Kota Tinggi",1.546782,104.063144,1,9,8,5,6,7,7,7,0.888888889,0.555555556,0.666666667,0.777777778,0.777777778,0.777777778,1,1,1,1,1,2,3,3,3,3,peridomestic_agri
+3,macaque,Johor,6,2019,30/6/2019,"Kampung Shaari, Simpang Renggam, Kluang",1.8287,103.3226,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,urban
+4,macaque,Johor,6,2019,30/6/2019,"Kampung Melayu, Batu 4, Paloh, Kluang",2.2071,103.1927,1,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+5,macaque,Johor,6,2019,30/6/2019,"Batu 7, Simpang Renggam, Kluang",1.8362,103.3374,1,7,3,0,3,1,0,0,0.428571429,0,0.428571429,0.142857143,0,0,0,1,1,0,0,1,2,2,1,1,peridomestic_agri
+6,macaque,Johor,6,2019,30/6/2019,"Bukit Nyamuk, Simpang Renggam, Kluang",1.7605,103.3891,1,13,9,3,7,4,0,1,0.692307692,0.230769231,0.538461538,0.307692308,0,0.076923077,1,1,1,0,1,2,3,2,1,2,peridomestic_agri
+7,macaque,Johor,9,2020,30/9/2020,"Endau Semaloi, Mersing",2.635275,103.638408,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+8,macaque,Johor,9,2020,30/9/2020,"Felda Tenggaruh Aroh Satu, Mersing",2.087249,103.876255,1,15,15,15,5,15,12,8,1,1,0.333333333,1,0.8,0.533333333,1,1,1,1,1,4,2,4,4,3,peridomestic_agri
+9,macaque,Johor,9,2020,30/9/2020,"Ayer Tawar, Mersing",2.634318,103.64179,1,2,1,1,0,0,0,1,0.5,0.5,0,0,0,0.5,1,0,0,0,1,2,1,1,1,2,peridomestic_agri
+10,macaque,Johor,9,2020,30/9/2020,"Nitar Dua, Mersing",2.39628,103.670488,1,8,7,1,2,7,5,3,0.875,0.125,0.25,0.875,0.625,0.375,1,1,1,1,1,2,2,3,2,2,peridomestic_agri
+11,macaque,Selangor,10,2019,31/10/2019,"Hulu Langat, Selangor",2.8675,101.8385,1,5,4,2,4,0,0,0,0.8,0.4,0.8,0,0,0,1,1,0,0,0,2,2,1,1,1,peridomestic_agri
+12,macaque,Selangor,11,2019,30/11/2019,"UKM, Hulu Langat,  Selangor",2.9293,101.7799,1,1,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,2,1,2,1,urban
+13,macaque,Selangor,12,2019,31/12/2019,"UKM, Hulu Langat,  Selangor",2.9293,101.7799,2,4,2,1,1,0,1,0,0.5,0.25,0.25,0,0.25,0,1,1,0,1,0,2,2,1,2,1,urban
+14,macaque,Selangor,4,2022,30/4/2022,"Jalan Sesapan Batu Rembau, Semenyih, Hulu Langat",2.8942775,101.8772194,1,3,1,0,0,0,0,0,0.333333333,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_forest
+15,macaque,Selangor,4,2022,30/4/2022,"Desa Indah, Sepang",2.698706,101.7564933,1,11,1,0,0,1,0,1,0.090909091,0,0,0.090909091,0,0.090909091,0,0,1,0,1,1,1,2,1,2,peridomestic_agri
+16,macaque,Selangor,4,2022,30/4/2022,"Jenderam Hilir, Dengkil, Sepang",2.8853938,101.728271,1,8,8,5,8,2,1,5,1,0.625,1,0.25,0.125,0.625,1,1,1,1,1,2,3,2,2,2,urban
+17,macaque,Selangor,4,2022,30/4/2022,"Mahkamah Salak Tinggi, Sepang",2.8238895,101.7238317,1,9,8,6,5,3,2,4,0.888888889,0.666666667,0.555555556,0.333333333,0.222222222,0.444444444,1,1,1,1,1,3,2,2,2,2,urban
+18,macaque,Selangor,5,2022,31/5/2022,"Desa Indah, Sepang, Hulu Langat",2.6981162,101.7555863,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+19,macaque,Selangor,5,2022,31/5/2022,"Ijok, Sabak Bernam",3.3209037,101.4297848,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+20,macaque,Selangor,6,2022,30/6/2022,"Jalan Rasa, Bukit Sentosa, Hulu Selangor",3.4450725,101.6003308,1,7,7,4,3,7,6,7,1,0.571428571,0.428571429,1,0.857142857,1,1,1,1,1,1,2,2,3,3,3,peridomestic_agri
+21,macaque,Selangor,6,2022,30/6/2022,"Pulau Indah, Klang, Petaling",2.9351036,101.3161654,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+22,macaque,Selangor,6,2022,30/6/2022,"Kg Endah, Tanjung Sepat, Kuala Langat",2.7339508,101.4678083,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+23,macaque,Pahang,10,2019,31/10/2019,"Kg Relong, Kuala Lipis, Pahang",4.2071969,101.9626555,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,peridomestic_agri
+24,macaque,Pahang,11,2019,30/11/2019,"Kg Beletik, Kuala Lipis, Pahang 1",4.1746254,101.9091628,2,20,20,13,16,15,19,11,1,0.65,0.8,0.75,0.95,0.55,1,1,1,1,1,4,4,4,4,4,peridomestic_agri
+25,macaque,Pahang,11,2019,30/11/2019,"Kolej Vokasional Sultan Haji Ahmad Shah, Kuala Lipis Pahang",4.0922517,102.0061229,2,12,12,6,6,11,11,4,1,0.5,0.5,0.916666667,0.916666667,0.333333333,1,1,1,1,1,3,3,4,4,2,peridomestic_agri
+26,macaque,Pahang,12,2019,31/12/2019,"Sungai Kerpan, Kuala Lipis, Pahang",4.1870288,102.0436588,1,6,6,4,6,6,6,6,1,0.666666667,1,1,1,1,1,1,1,1,1,2,3,3,3,3,urban
+27,macaque,Pahang,12,2019,31/12/2019,"Kg Beletik, Kuala Lipis, Pahang 2",4.016509,101.9100844,1,10,10,4,9,10,8,9,1,0.4,0.9,1,0.8,0.9,1,1,1,1,1,2,3,3,3,3,peridomestic_forest
+28,macaque,Pahang,12,2019,31/12/2019,"CCRC Benda, Kuala Lipis, Pahang",4.050368,101.9861081,1,3,3,3,2,3,2,2,1,1,0.666666667,1,0.666666667,0.666666667,1,1,1,1,1,2,2,2,2,2,peridomestic_agri
+29,macaque,Pahang,3,2020,31/3/2020,"Masjid Kechau Tui, Kuala Lipis, Pahang",4.2911464,101.9778253,1,8,8,8,7,8,8,8,1,1,0.875,1,1,1,1,1,1,1,1,3,3,3,3,3,peridomestic_agri
+30,macaque,Pahang,9,2022,30/9/2022,"Indera Mahkota 13, Astana Willa, Kuantan",3.8370726,103.2727817,1,2,2,1,0,1,1,2,1,0.5,0,0.5,0.5,1,1,0,1,1,1,2,1,2,2,2,urban
+31,macaque,Pahang,9,2022,30/9/2022,"Kg Semangat, Pekan",3.6332681,103.3202384,1,1,1,0,0,0,1,0,1,0,0,0,1,0,0,0,0,1,0,1,1,1,2,1,peridomestic_agri
+32,macaque,Pahang,9,2022,30/9/2022,"Kg Batu Putih, Pekan",3.6427924,103.294828,1,1,1,0,0,1,0,1,1,0,0,1,0,1,0,0,1,0,1,1,1,2,1,2,peridomestic_agri
+33,macaque,Pahang,9,2022,30/9/2022,"Bandar Damansara, Kuantan",3.8935086,103.3310202,1,3,3,0,0,3,0,3,1,0,0,1,0,1,0,0,1,0,1,1,1,2,1,2,urban
+34,macaque,Pahang,9,2022,30/9/2022,"Kg Ulu Luit, Maran",3.6581565,102.819366,1,4,4,3,3,4,4,4,1,0.75,0.75,1,1,1,1,1,1,1,1,2,2,2,2,2,peridomestic_agri
+35,macaque,Pahang,9,2022,30/9/2022,"Kg Serengkam, Maran",3.4869782,102.7991083,1,2,2,2,1,2,1,2,1,1,0.5,1,0.5,1,1,1,1,1,1,2,2,2,2,2,peridomestic_forest
+36,macaque,Melaka,11,2019,30/11/2019,"Pengkalan Lanjut Tanjung Keling, Melaka Tengah",2.2229,102.1704,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,urban
+37,macaque,Melaka,11,2019,30/11/2019,"Kem Terendak, Sungai Udang, Melaka Tengah",2.2859,102.1061,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,urban
+38,macaque,Melaka,11,2019,30/11/2019,"Kg Melekeh Dalam, Alor Gajah",2.4407,102.1731,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,urban
+39,macaque,Kelantan,2,2020,29/2/2020,"Kg Lepam Jaya, Gua Musang ",4.7831119,102.0091398,1,16,8,4,4,2,1,3,0.5,0.25,0.25,0.125,0.0625,0.1875,1,1,1,1,1,2,2,2,2,2,peridomestic_agri
+40,macaque,Kelantan,2,2020,29/2/2020,"Kpg. Chintek, Gua Musang ",4.8282741,101.985278,2,6,4,1,3,2,3,3,0.666666667,0.166666667,0.5,0.333333333,0.5,0.5,1,1,1,1,1,2,2,2,2,2,peridomestic_agri
+41,macaque,Kelantan,2,2020,29/2/2020,"Kpg. Banggol Judah, Machang",5.8224169,102.2383955,1,3,1,0,1,1,0,1,0.333333333,0,0.333333333,0.333333333,0,0.333333333,0,1,1,0,1,1,2,2,1,2,urban
+42,macaque,Kelantan,2,2020,29/2/2020,"Kpg. Panglima Bayu, Tanah Merah ",5.8168877,101.971691,1,2,2,1,2,1,0,2,1,0.5,1,0.5,0,1,1,1,1,0,1,2,2,2,1,2,peridomestic_agri
+43,macaque,Kelantan,2,2020,29/2/2020,"Kpg. Pak Gombak, Machang ",5.8369483,102.1994189,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+44,macaque,Kedah,3,2020,31/3/2020,"Kuala Nerang, Padang Terap",6.2358505,100.5365784,1,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_forest
+45,macaque,Kedah,3,2020,31/3/2020,"Ladang Wesley, Baling 2",5.4335468,100.5255823,1,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,urban
+46,macaque,Kedah,3,2020,31/3/2020,"Paya Jemeri, Baling 1",5.5521793,100.6349776,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+47,macaque,Perak,10,2020,31/10/2020,"Sugai Limau, Kinta",4.7809,100.6648,1,8,1,0,0,1,1,1,0.125,0,0,0.125,0.125,0.125,0,0,1,1,1,1,1,2,2,2,peridomestic_forest
+48,macaque,Perak,10,2020,31/10/2020,"Felda Trolak Utara, Mualim",3.9455476,101.3558504,1,1,1,0,1,1,0,1,1,0,1,1,0,1,0,1,1,0,1,1,2,2,1,2,peridomestic_agri
+49,macaque,Perak,10,2020,31/10/2020,"Sek Agama Slim River, Batang Padang ",4.2051219,101.4319838,1,1,1,0,0,1,1,1,1,0,0,1,1,1,0,0,1,1,1,1,1,2,2,2,peridomestic_forest
+50,macaque,Perak,10,2020,31/10/2020,"Diamond Creek, Mualim",3.771434,101.5219013,1,2,1,1,0,1,2,1,0.5,0.5,0,0.5,1,0.5,1,0,1,1,1,2,1,2,2,2,peridomestic_forest
+51,macaque,Perak,10,2020,31/10/2020,"Kg Chulek,Gopeng, Kampar",4.4818466,101.1749601,1,4,2,2,0,2,2,2,0.5,0.5,0,0.5,0.5,0.5,1,0,1,1,1,2,1,2,2,2,peridomestic_agri
+52,macaque,Perak,3,2022,31/3/2022,"Bubuk Buntur, Kuala Gula, Kerian (?) ",4.9403,100.4806,1,11,1,0,0,1,0,1,0.090909091,0,0,0.090909091,0,0.090909091,0,0,1,0,1,1,1,2,1,2,peridomestic_forest
+53,macaque,Perak,6,2022,30/6/2022,"Kg Bakar Bata Beruas, Manjung, Perak",4.3958,100.785,1,8,1,1,0,0,0,0,0.125,0.125,0,0,0,0,1,0,0,0,0,2,1,1,1,1,peridomestic_agri
+54,macaque,Perlis,2,2021,28/2/2021,"Kg Paya Kelubi, Kangar",6.5362821,100.258726,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+55,macaque,Perlis,2,2021,28/2/2021,"PPRT, Kangar",6.4325716,100.1650303,1,3,1,0,0,1,0,1,0.333333333,0,0,0.333333333,0,0.333333333,0,0,1,0,1,1,1,2,1,2,peridomestic_agri
+56,macaque,Perlis,2,2021,28/2/2021,"Bukit Lagi, Kangar",6.4356306,100.1897602,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,urban
+57,macaque,Perlis,2,2021,28/2/2021,"Jalan Kaki Bukit, Kangar",6.5883597,100.2005995,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_forest
+58,macaque,Negeri Sembilan,8,2021,31/8/2021,"Lot 1134, Batu 14, Pasir Panjang, Port Dickson",2.4328865,101.9082273,1,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+59,macaque,Negeri Sembilan,8,2021,31/8/2021,"Sungai Raya, Tg Agas, Port Dickson",2.4117858,101.9622927,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_forest
+60,macaque,Negeri Sembilan,8,2021,31/8/2021,"Kg Segenting, Port Dickson",2.4268847,101.8732208,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_forest
+61,macaque,Negeri Sembilan,9,2021,30/9/2021,"Kg Teluk Pelanduk, Port Dickson",2.4270884,101.9212121,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,urban
+62,macaque,Negeri Sembilan,9,2021,30/9/2021,"Kg Sungai Bioh, Lenggeng, Seremban",2.8639405,101.8878606,1,2,1,0,1,0,0,1,0.5,0,0.5,0,0,0.5,0,1,0,0,1,1,2,1,1,2,peridomestic_agri
+63,macaque,Terengganu,6,2022,30/6/2022,"Kg Beris Baru, Besut",5.7969316,102.5233648,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+64,macaque,Terengganu,6,2022,30/6/2022,"Kg Kerandang, Besut",5.716086,102.569492,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,peridomestic_agri
+65,macaque,Terengganu,6,2022,30/6/2022,"Kg Rahmat, Besut",5.4651013,102.7999929,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,peridomestic_agri
+66,macaque,Terengganu,6,2022,30/6/2022,"Kg Bukit Diman, Hulu Terengganu",5.0456679,103.1141474,1,9,9,7,7,9,6,9,1,0.777777778,0.777777778,1,0.666666667,1,1,1,1,1,1,3,3,3,3,3,peridomestic_agri
+67,macaque,Terengganu,7,2022,31/7/2022,"Istana Syarqiyyah, Bukit Chendering, Kuala Terengganu",5.2550208,103.1709478,1,1,1,0,0,1,0,1,1,0,0,1,0,1,0,0,1,0,1,1,1,2,1,2,peridomestic_forest
+68,macaque,Terengganu,7,2022,31/7/2022,"Pulau Kerengga, Kuala Terengganu",5.1288338,103.2487988,1,2,2,2,1,0,0,1,1,1,0.5,0,0,0.5,1,1,0,0,1,2,2,1,1,2,peridomestic_agri
+69,macaque,Terengganu,7,2022,31/7/2022,"Kg Jati Gong Badak, Kuala Terengganu",5.3856019,103.086532,1,3,2,0,1,2,2,2,0.666666667,0,0.333333333,0.666666667,0.666666667,0.666666667,0,1,1,1,1,1,2,2,2,2,urban
+70,macaque,Terengganu,7,2022,31/7/2022,"Felda Belara, Kuala Terengganu",5.292288,102.944331,1,3,3,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,peridomestic_agri
+71,macaque,Terengganu,7,2022,31/7/2022,"Felda Jerangau, Dungun",4.9011781,103.1867777,1,6,6,6,6,6,6,6,1,1,1,1,1,1,1,1,1,1,1,3,3,3,3,3,peridomestic_forest
+72,macaque,Terengganu,9,2022,30/9/2022,"Kg Baru, Kemasik, Kemaman",4.4251179,103.4426062,1,1,1,0,0,1,0,1,1,0,0,1,0,1,0,0,1,0,1,1,1,2,1,2,urban
+73,macaque,Terengganu,9,2022,30/9/2022,"Bukit Teruna, Kemasik, Kemaman",4.3764006,103.4084356,1,13,4,1,1,2,2,2,0.307692308,0.076923077,0.076923077,0.153846154,0.153846154,0.153846154,1,1,1,1,1,2,2,2,2,2,peridomestic_agri
+74,macaque,Terengganu,9,2022,30/9/2022,"Rantau Bukit , Rantau Laut, Kemasik, Kemaman",4.4696882,103.4414913,1,14,2,1,0,1,0,1,0.142857143,0.071428571,0,0.071428571,0,0.071428571,1,0,1,0,1,2,1,2,1,2,urban
+75,macaque,Kuala Lumpur,6,2022,30/6/2022,Kg Sungai Penchala,3.1587707,101.6305307,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,urban
+76,macaque,Kuala Lumpur,6,2022,30/6/2022,Taman Persekutuan Bukit Kiara TTDI,3.145795,101.632394,1,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,urban
+77,macaque,Kuala Lumpur,9,2022,30/9/2022,"Kelab Golf Diraja Selangor, Jalan Tun Razak",3.1438739,101.7236207,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,urban
+78,macaque,Putrajaya,6,2022,30/6/2022,Putrajaya Presint 11,2.9623865,101.6767076,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,urban
